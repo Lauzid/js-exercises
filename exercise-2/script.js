@@ -2,7 +2,7 @@
  * Exercise 2
  * ----------
  * Write a JavaScript program to get the
- * extension of a filename.
+ * extension of a filename
  */
 
 /**
