@@ -21,6 +21,10 @@
 //   return returnArray
 // }
 
+// Math.max => chamda do método max do Objeto max. Método max retorna o numero com maior valor.
+// Math.max(...arr) "..." é um spread operator, ele permite copiar tudo de um array ou objeto
+//  para outro array ou objeto. Só essa parte do código já é responsável por capturar o maior
+//  número dentro do array, mas em seguida vem o filto que filtra somente números pares.
 const maxEven = (arr) => Math.max(...arr.filter(even => even % 2 === 0))
 
 console.log(maxEven([1, 2, 3, 4, 5]))
