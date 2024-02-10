@@ -7,22 +7,26 @@
  * additional properties)
  */
 
-// Learning objects
-const person1 = {
-  firstName: 'Geralt',
-  lastName: 'of Rivia',
-  age: 80,
-  isEmployed: true,
-  castAard: function(){return console.log('*' + this.firstName + ' casts Aard*')},
+const spell1 = {
+  name: 'Aard',
+  color: 'Yellow',
+  range: 2,
+  active: true
 }
 
-const person2 = {
-  firstName: 'Yeneffer',
-  lastName: 'of vengerberg',
-  age: 98,
-  isEmployed: false,
-  castAard: () => {console.log('*Yennefer casts Aard*')},
-} 
+const spell2 = {
+  name: 'Aard',
+  color: 'Blue',
+  range: 20,
+  active: false,
+}
 
-person1.castAard()
-person2.castAard()
+const compareObjects = (obj1, obj2) => {
+  const obj1Keys = Object.keys(obj1).length;
+  const obj2Keys = Object.keys(obj2).length;
+
+  if (obj1Keys < obj2Keys) return false
+  else return true
+};
+
+console.log(compareObjects(spell1, spell2))
