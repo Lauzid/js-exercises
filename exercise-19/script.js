@@ -5,18 +5,18 @@
  * random hexadecimal color code.
  */
 
-const hex = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F']
+/**
+ * .toString(16) está sendo aplicado á um Number Object que é "Math.floor(Math.random() * 16)",
+ * portanto, pode receber no parâmetro um 'radix' de 2 - 36. Se o radix for 16 converte a String
+ * em Hexadecimal, se for 2 vai converter para binario.
+ */ 
 
-const getRandomNumber = () =>
-  Math.floor(Math.random() * hex.length)
+const getRandomHexNumber = () =>
+  Math.floor(Math.random() * 16).toString(16)
 
-const getRandomHex = () => {
-  let hexColor = '#'
-  for (let i = 0; i < 6; i++) {
-    hexColor += hex[getRandomNumber()]
-  }
-  return hexColor
-}
+const getRandomHexColor = () =>
+  '#' + Array.from({ length: 6 }).map(getRandomHexNumber).join('')
 
-console.log(getRandomHex())
-  
+console.log(getRandomHexColor())
+console.log(getRandomHexColor())
+console.log(getRandomHexColor())
